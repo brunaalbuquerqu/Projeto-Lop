@@ -1,0 +1,50 @@
+# Projeto-Lop
+Projeto Lop- Joguinho 
+/*
+Equipe:
+ Bruna Beatriz Alves de Freitas Albuquerque 01B (Líder)
+ Amanda dos Santos Rodrigues - Subturma 01B
+ Etapa : 1ª e 2ª
+ */
+ 
+var x=200 ;var y=200 ;
+function setup() {
+  createCanvas(400, 400);
+  fill(255, 0, 0);
+}
+
+function draw() {
+  background(248, 54, 168);
+  ellipse(x, y, 60, 60);
+  fill('#0f0');
+  rect(20, 20, 55, 55);
+ 
+  if (keyIsDown(LEFT_ARROW)) {
+
+    x -= 5;
+
+  }
+
+ 
+
+  if (keyIsDown(RIGHT_ARROW)) {
+
+    x += 5;
+
+  }
+
+ 
+
+  if (keyIsDown(UP_ARROW)) {
+
+    y -= 5;
+
+  }
+
+ 
+
+  if (keyIsDown(DOWN_ARROW)) {
+
+    y += 5;
+}
+}
