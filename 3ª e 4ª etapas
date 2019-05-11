@@ -7,59 +7,65 @@ Equipe:
  Etapa : 1ª e 2ª
  */
  
-var x=200 ;var y=200 ;
-var x_disparo;
-var y_disparo;
-
-var estadoDisparo= false;
+var xi = 175
+var yi = 20
+dsp = false
+xj = 200
+yj = 350
+var xd;
+var yd;
 
 function setup() {
   createCanvas(400, 400);
-  fill(255, 0, 0);
 }
-
-function draw() {
-  background(248, 54, 168);
-  ellipse(x, y, 60, 60);
-  if(x> width)
-    x=0;
-   if (keyIsDown(CONTROL) && estadoDisparo==false ){
-    x_disparo=x;
-     
-    y_disparo=y;
-     
-     estadoDisparo= true;
-   }
-  if( estadoDisparo == true ){
-  ellipse(x_disparo, y_disparo, 6, 6);
-    y_disparo= y_disparo - 10;
-    if( y_disparo < 0){
-      estadoDisparo = false;
+function draw(){
+  if(!dsp){
+  xd = 0
+  yd = 0
+  }
+  if(keyIsDown(LEFT_ARROW)){
+    xj -= 5;
     }
+  if(keyIsDown(RIGHT_ARROW)){
+    xj += 5;
+    }
+  if(keyIsDown(UP_ARROW)){
+    yj -= 5;
+    }
+  if(keyIsDown(DOWN_ARROW)){
+    yj += 5;
+    }
+  background(248,54,168);
+  fill(120,0,0);
+  rect(xi,yi,50,50);
+  yi += 3
+  if(yi>400){
+    yi = 20
   }
   fill('#0f0');
-  rect(20, 20, 55, 55);
- 
-  if (keyIsDown(LEFT_ARROW)) {
-
-    x -= 5;
-
+  ellipse(xj,yj,60,50);
+  if(xj > 400){
+     xj = 400
   }
-
-  if (keyIsDown(RIGHT_ARROW)) {
-
-    x += 5;
-
+  if(xj < 0){
+    xj = 0
   }
-
-  if (keyIsDown(UP_ARROW)) {
-
-    y -= 5;
-
+if(yj > 400){
+     yj = 400
   }
-
-  if (keyIsDown(DOWN_ARROW)) {
-
-    y += 5;
-}
+  if(yj < 0){
+    yj = 0
+  }
+  ellipse(xd,yd,8,8);
+    if (keyIsDown(CONTROL) && (!dsp) ){ 
+    dsp = true; 
+    xd = xj;
+    yd = yj;
+  }
+  if (dsp) {
+    yd = yd - 15;
+    if (yd < 0) { 
+      dsp = false; 
+    }
+  }
 }
