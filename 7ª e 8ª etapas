@@ -189,6 +189,6 @@ if(yj > 400){
   if(pts == nvl + 1000){
     stg = stg + 1
     nvl = nvl + 2000;
-    qig = qig+2
+    qt = qt+4
   }
 }
