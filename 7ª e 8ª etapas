@@ -29,7 +29,7 @@ function setup() {
    frameRate(30);
   tamArea = 400; 
   createCanvas(tamArea,tamArea);
-   for(i=0;i<qt;i++){
+   for(i=0;i<100;i++){
     xi[i] = random(50,350);
     yi[i] = random(-500,-50);
     ri[i] = random(5,10);
@@ -83,7 +83,7 @@ for(i=0;i<qt;i++){
   //se quiser mudar a cor do disparo está dentro do fill
   for(i=0;i<qt;i++){
   if(dsp[i]){
-    fill('#0f0');
+    fill(420,117,32);
    ellipse(xd[i],yd[i],2*rd,2*rd);
     yd[i] = yd[i] - 8;
     if (yd[i] < 0) { 
@@ -101,11 +101,6 @@ for(i=0;i<qt;i++){
     xb[i] = random(-500,-5000);
     }
 }
-  //Inimigo: Corpo de colisão; Não pode deixar fora do corpo Visivel.
-  for(i=0;i<qt;i++){
-  fill(35,45,20)
-  ellipse(xi[i],yi[i],ri[i],ri[i]);
-   }
   //Inimigo: Corpo visível e movimentação
   for(i=0;i<qt;i++){
   fill(vcorR[i], vcorG[i], vcorB[i]);
@@ -189,6 +184,6 @@ if(yj > 400){
   if(pts == nvl + 1000){
     stg = stg + 1
     nvl = nvl + 2000;
-    qt = qt+4
+    qt = qt+2
   }
 }
