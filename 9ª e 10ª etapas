@@ -73,7 +73,7 @@ function draw(){
   background(Telainicial, 30, 20, 50);
   textSize(32);
   fill(235, 206, 255);
-  text("BRIGHT BALLS"+"\n", 50, 110);
+  text("LUMINOUS GALAXY"+"\n", 50, 110);
      // tecla para começar o jogo
   if(keyIsDown(ENTER)){
     tela = 2;
