@@ -85,7 +85,7 @@ function draw(){
   background(Telainicialização,30,20,50);
   textSize(21);
   fill(400, 400, 455);
-  text("Inicialização: "+"  \n"+"  Hanna é uma jovem guerreira"+"\n"+"  que lança objetos contra bolas"+"\n"+"  brilhantes na galáxia."+"\n"+"  Laçamento: tecla Ctrl", 50, 90);
+  text("Inicialização: "+"  \n"+"  Hanna é uma jovem guerreira"+"\n"+"  que lança objetos contra bolas"+"\n"+"  brilhantes na galáxia."+"\n"+"  Lançamento: tecla Ctrl", 50, 90);
   text("\n"+ "Segundos: "+(Math.floor(tempo/30)), 50, 260);
      
   if( tempo == 150){
